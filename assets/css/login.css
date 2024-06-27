@@ -28,6 +28,12 @@ img {
     font-size: 2.3rem;
 }
 
+.kotak .simpen{
+justify-content:center ;
+text-align: center;
+margin: auto;
+}
+
 .kotak h1,
 .logo h1 {
     text-align: center;
@@ -46,7 +52,6 @@ img {
 }
 
 #login input {
-    margin: auto;
     font-family: inherit;
     padding: 6px 16px;
     border: radius 8px;
@@ -55,17 +60,17 @@ img {
     font-size: inherit;
     margin-top: 8px;
     margin-bottom: 16px;
+    height: fit-content;
 }
 
 #login input[name="submit"] {
-    margin: auto;
     background-color: #11894A;
     border: none;
     color: rgb(255, 255, 255);
     margin-top: 16px;
     padding: 8px;
-    /* border-radius: 8px; */
     align-items: center;
+
 }
 
 #login input[name="submit"]:hover {

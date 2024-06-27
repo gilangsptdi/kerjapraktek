@@ -7,8 +7,8 @@ session_set_save_handler(new MySQLSessionHandler($conn), true);
 session_start();
 
 if (!isset($_SESSION['kode_user'])) {
-    header('Location: ../?status=loginGagal');
-    exit;
+  header('Location: ../?status=loginGagal');
+  exit;
 }
 
 $kodeProfil = $_SESSION['kode_user'];
@@ -21,13 +21,13 @@ $username = '';
 
 
 if (mysqli_num_rows($query) > 0) {
-    $data = mysqli_fetch_array($query);
-    $foto = $data['foto'];
-    $foto = base64_encode($foto);
-    $nama = $data['namauser'];
-    $username = $data['username'];
+  $data = mysqli_fetch_array($query);
+  $foto = $data['foto'];
+  $foto = base64_encode($foto);
+  $nama = $data['namauser'];
+  $username = $data['username'];
 } else {
-    error_log("User dengan kode $kodeProfil tidak ditemukan.");
+  error_log("User dengan kode $kodeProfil tidak ditemukan.");
 }
 
 
@@ -139,6 +139,10 @@ if (!isset($_SESSION['kode_user'])) {
             <option value="" selected disabled>-Pilih-</option>
             <?php
             include('../include/config.php');
+
+            //   $hemoglobin = !empty($_POST['hemoglobin']) ? $_POST['hemoglobin'] : null;
+            //   $leukosit = !empty($_POST['leukosit']) ? $_POST['leukosit'] : null;
+            // $trombosit = !empty($_POST['trombosit']) ? $_POST['trombosit'] : null;
             $sql = "SELECT * FROM data_pasien";
             $query = mysqli_query($conn, $sql);
 

@@ -1,6 +1,5 @@
-
 <?php
-include ('../include/config.php');
+include('../include/config.php');
 include('../actions/MySQLSessionHandler.php');
 // Start the session and check if user is logged in
 session_set_save_handler(new MySQLSessionHandler($conn), true);
@@ -59,8 +58,8 @@ if (!isset($_SESSION['kode_user'])) {
         <a class="profile dropdown">
             <img src="data:image/jpeg;base64,<?php echo $foto ?>" alt="profile" />
             <div class="card-profile">
-                <b><?php echo $nama?></b>
-                <?php echo $username?>
+                <b><?php echo $nama ?></b>
+                <?php echo $username ?>
             </div>
             <i class="bi bi-caret-down-fill "></i>
         </a>
@@ -137,9 +136,9 @@ if (!isset($_SESSION['kode_user'])) {
                                 <?php
                                 include('../actions/generatecode.php')
                                 ?>
-                                <label for="noreg">No. Registrasi Lab</label>
+                                <label for="no_registrasi">No. Registrasi Lab</label>
                                 <input type="text" value="<?php echo $noreg ?>" disabled>
-                                <input type="hidden" name="noreg" value="<?php echo $noreg ?>">
+                                <input type="hidden" name="no_registrasi" value="<?php echo $noreg ?>">
                             </div>
                             <div class="row">
                                 <?php
@@ -178,7 +177,7 @@ if (!isset($_SESSION['kode_user'])) {
 
         <!-- Content -->
     </main>
-    <?php include('../actions/cekStatus.php');?>
+    <?php include('../actions/cekStatus.php'); ?>
     <script src="../assets/js/script.js"></script>
     <script>
     </script>

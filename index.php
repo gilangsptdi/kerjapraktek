@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="password" class="p1" require>Password</label>
 
             <input name="password" type="password">
-            <input type="submit" name="submit" value="Log-In" require>
+            <input class="simpen" type="submit" name="submit" value="Log-In" require>
 
         </form>
     </div>

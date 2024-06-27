@@ -50,8 +50,8 @@ if (mysqli_num_rows($query) > 0) {
         <a class="profile dropdown">
             <img src="data:image/jpeg;base64,<?php echo $foto ?>" alt="profile" />
             <div class="card-profile">
-                <b><?php echo $nama?></b>
-                <?php echo $username?>
+                <b><?php echo $nama ?></b>
+                <?php echo $username ?>
             </div>
             <i class="bi bi-caret-down-fill "></i>
         </a>
@@ -96,6 +96,10 @@ if (mysqli_num_rows($query) > 0) {
                 <i class="bi bi-person-fill-add"></i>
                 <p>Daftar Laporan</p>
             </a>
+            <a href="../laporanpasien/index.php" class="menu">
+                <i class="bi bi-person-fill-add"></i>
+                <p>Daftar Laporan Bulanan</p>
+            </a>
         </div>
         <a href="../actions/logout.php" class="menu">
             <i class="bi bi-box-arrow-left"></i>
@@ -117,7 +121,7 @@ if (mysqli_num_rows($query) > 0) {
         <h2>Home</h2>
         <div class="container">
             <div class="card">
-                <h4>Total Pasien <i class="bi bi-people-fill"></i></h4>
+                <h4>Total Pasien <a href="../laporanpasien/index.php" class="bi bi-people-fill"></a></h4>
                 <h1>
                     <?php
                     $sql = "SELECT * FROM data_pasien";
@@ -126,8 +130,8 @@ if (mysqli_num_rows($query) > 0) {
                     ?></h1>
             </div>
             <div class="card">
-                <h4>Total Laporan <i class="bi bi-people-fill"></i></h4>
-                <h1><?php 
+                <h4>Total Laporan <a class="bi bi-people-fill"></a></h4>
+                <h1><?php
                     $tgl =  Date('Y-m-d');
                     $sql = "SELECT * FROM laporan_lab";
                     $query = mysqli_query($conn, $sql);
@@ -145,7 +149,7 @@ if (mysqli_num_rows($query) > 0) {
             <div class="card">
                 <h4>Total Laporan Harian <i class="bi bi-people-fill"></i></h4>
                 <h1>
-                    <?php 
+                    <?php
                     $tgl =  Date('Y-m-d');
                     $sql = "SELECT * FROM laporan_lab WHERE tanggal='$tgl'";
                     $query = mysqli_query($conn, $sql);

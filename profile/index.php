@@ -125,7 +125,7 @@ if (mysqli_num_rows($query) > 0) {
                 <h3><?php echo $nama ?></h3>
                 <p><?php echo $username ?></p>
                 <div class="btn-group">
-                    <a href="" class="btn btn-reset">Reset Password</a>
+                    <a href="../profile/akun.php" class="btn btn-reset">Ubah Profile</a>
                     <a href="../actions/logout.php" class="btn btn-logout"> Logout</a>
                 </div>
             </div>

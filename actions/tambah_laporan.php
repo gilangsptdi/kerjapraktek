@@ -2,7 +2,7 @@
 include('../include/config.php');
 
 if (isset($_POST['simpan'])) {
-    $kode_laporan = $_POST['kode_laporan'];
+    // $kode_laporan = $_POST['kode_laporan'];
     $noreg = $_POST['noreg'];
     $hemoglobin = $_POST['hemoglobin'];
     $leukosit = $_POST['leukosit'];
@@ -58,11 +58,11 @@ if (isset($_POST['simpan'])) {
     $tanggal = $_POST['tanggal'];
 
     $sql = "INSERT INTO laporan_lab (
-                kode_laporan, tanggal, no_registrasi, hemoglobin, leukosit, trombosit, eritrosit, hematokrit, limfosit, monosit, granulosit, led, golongandarah, warna, kejernihan, ph, beratjenis, protein,
+                tanggal, no_registrasi, hemoglobin, leukosit, trombosit, eritrosit, hematokrit, limfosit, monosit, granulosit, led, golongandarah, warna, kejernihan, ph, beratjenis, protein,
                 glukosa, bilirubin, urobilinogen, keton, nitrit, leukosittt, eritrosittt, eritrositt, leukositt, epitel, kristal, silinder, teskehamilan, 
                 pagi, sewaktu, antihiv, sifilistprapid, hbsag, antihivr2, antihivr3, styphio, sparatyphiao, sparatyphibo, sparatyphico, 
                 styphih, sparatyphiah, sparatyphibh, sparatyphich, ns1dbd, iggdbd, igmdbd, guladarahsewaktu, guladarahpuasa, guladarah2jamp, 
-                kolesteroltotal, asamurat) VALUES ('$kode_laporan', '$tanggal', '$noreg', '$hemoglobin', '$leukosit','$trombosit', '$eritrosit', '$hematokrit', '$limfosit','$monosit', '$granulosit', '$led', '$golongandarah', '$warna', '$kejernihan', '$ph', '$beratjenis','$protein',
+                kolesteroltotal, asamurat) VALUES ('$tanggal', '$noreg', '$hemoglobin', '$leukosit','$trombosit', '$eritrosit', '$hematokrit', '$limfosit','$monosit', '$granulosit', '$led', '$golongandarah', '$warna', '$kejernihan', '$ph', '$beratjenis','$protein',
                 '$glukosa', '$bilirubin', '$urobilinogen', '$keton', '$nitrit', '$leukosittt', '$eritrosittt', '$eritrositt', '$leukositt', '$epitel', '$kristal', '$silinder', '$teskehamilan', 
                 '$pagi', '$sewaktu', '$antihiv', '$sifilistprapid', '$hbsag', '$antihivr2', '$antihivr3', '$styphio', '$sparatyphiao', '$sparatyphibo', '$sparatyphico', 
                 '$styphih', '$sparatyphiah', '$sparatyphibh', '$sparatyphich', '$ns1dbd', '$iggdbd', '$igmdbd', '$guladarahsewaktu', '$guladarahpuasa', '$guladarah2jamp', 
