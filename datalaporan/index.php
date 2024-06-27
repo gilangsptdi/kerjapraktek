@@ -96,7 +96,7 @@ if (!isset($_SESSION['kode_user'])) {
                 <p>Tambah Laporan Pasien</p>
             </a>
         </div>
-
+<!-- tes -->
         <a class="menu dropdown">
             <i class="bi bi-hospital"></i>
             <p>Hasil</p>
